@@ -1,22 +1,12 @@
-import { createActor } from 'xstate';
-import { machine } from './machine';
+import { createActor } from "xstate";
+import { machine } from "./machine";
 
 async function bootstrap() {
-  console.log('buwstwap');
-
   const snapshot = {
-    status: 'active',
+    status: "active",
     output: null,
     error: null,
-    value: {
-      'Data Preparation': {
-        Intake: {
-          LawLift: 'Received',
-          Passports: 'Received',
-          'Payment Requirement': 'Start',
-        },
-      },
-    },
+    value: "Start",
     historyValue: {},
     context: {},
     children: {},
